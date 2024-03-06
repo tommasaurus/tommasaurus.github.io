@@ -69,7 +69,7 @@
        backDelay: 2000
      });
    }
-   
+
   /**
    * Scrool with ofset on links with a class name .scrollto
    */
@@ -198,6 +198,25 @@
         spaceBetween: 20
       }
     }
+  });
+
+  function isPdfLink(href) {
+    return href.match(/\.pdf$/i);
+  }
+  
+  // Event listener for PDF links
+  document.addEventListener('DOMContentLoaded', function() {
+    const links = document.querySelectorAll('a');
+    links.forEach(link => {
+      if (isPdfLink(link.href)) {
+        link.addEventListener('click', function(e) {
+          e.preventDefault(); // Prevent the default browser behavior of opening the link
+  
+          // Code to display the PDF - This example uses window.open, but you could also use an iframe or a PDF viewer library
+          window.open(this.href, '_blank');
+        });
+      }
+    });
   });
 
   /**
