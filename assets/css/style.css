@@ -906,6 +906,19 @@ section .container {
   overflow: hidden;
   z-index: 1;
   background: rgba(0, 0, 0, 0.6);
+  height: 250px; /* Set a fixed height for the container */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* This will hide any overflowed content */
+}
+
+.portfolio .portfolio-wrap img {
+  max-width: 100%; /* Max width to 100% of the parent element */
+  height: 250px; /* Max height to a fixed value */
+  object-fit: cover; /* This will cover the area, crop the image if necessary, without stretching it */
+  width: auto; /* Width set to auto to maintain aspect ratio */
+  height: auto; /* Height set to auto to maintain aspect ratio */
 }
 
 .portfolio .portfolio-wrap::before {
