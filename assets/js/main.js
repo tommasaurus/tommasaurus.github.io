@@ -260,7 +260,7 @@
   const portfolioDetailsLightbox = GLightbox({
     selector: '.portfolio-details-lightbox',
     width: '90%',
-    height: '90vh'
+    height: '90vh',
   });
 
   /**
@@ -268,7 +268,7 @@
    */
   new Swiper('.portfolio-details-slider', {
     speed: 400,
-    loop: true,
+    // loop: true,
     autoplay: {
       delay: 5000,
       disableOnInteraction: false
